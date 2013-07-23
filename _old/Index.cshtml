@@ -1,0 +1,25 @@
+﻿@section Head
+{
+    <script type="text/javascript" src="@Url.Content("~/Content/Js/Core/centurion.index.js")"></script>
+}
+<div class="start" id="gameStarter">
+    <a href="#" id="aStart">Start!</a> <span id="starterShots">or start at:
+        <input id="txtNbShotsStart" type="text" value="0" />
+        shots.</span>
+</div>
+<div class="game" id="gameStarted">
+    <div class="left">
+        <span id="timeRemaining"></span><span id="timeRemainingLabel">seconds until next shot</span>
+    </div>
+    <div class="right">
+        <span id="shotsTakenLabel">Shots taken</span>
+        <hr />
+        <span id="shotsTaken"></span>
+        <hr />
+        <div class="pauseLinks">
+            <a href="#" id="aPause">Pause</a> <a href="#" id="aUnpause">Unpause</a>
+        </div>
+    </div>
+</div>
+<audio id="song" src="@Url.Content("~/Content/Sounds/bell.wav")">
+</audio>

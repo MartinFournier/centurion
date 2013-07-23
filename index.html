@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Forever a Centurion</title>
+    <link rel="shortcut icon" href="static/img/forevercenturion.ico" type="image/x-icon">
+    <link href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/master.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="page">
+        <header>
+        <div class="headerContent">
+        </div>
+    </header>
+        <section id="main">
+            <div class="start" id="gameStarter">
+    <a href="#" id="aStart">Start!</a> <span id="starterShots">or start at:
+        <input id="txtNbShotsStart" type="text" value="0" />
+        shots.</span>
+</div>
+<div class="game" id="gameStarted">
+    <div class="left">
+        <span id="timeRemaining"></span><span id="timeRemainingLabel">seconds until next shot</span>
+    </div>
+    <div class="right">
+        <span id="shotsTakenLabel">Shots taken</span>
+        <hr />
+        <span id="shotsTaken"></span>
+        <hr />
+        <div class="pauseLinks">
+            <a href="#" id="aPause">Pause</a> <a href="#" id="aUnpause">Unpause</a>
+        </div>
+    </div>
+</div>
+<audio id="song" src="static/sounds/bell.wav">
+</audio>
+        </section>
+        <footer>
+    <div class="footerContent">
+    <span class="footerCopyright">
+        </span>
+        </div>
+        </footer>
+    </div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="static/js/centurion.index.js"></script>
+</body>
+</html>

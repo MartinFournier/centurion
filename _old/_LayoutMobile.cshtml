@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Forever a Centurion</title>
+    <link rel="shortcut icon" href="@Url.Content("~/Content/Images/forevercenturion.ico")" type="image/x-icon">
+    <link href="@Url.Content("~/Content/Css/master.mobile.css")" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+    @RenderSection("Head", false)
+</head>
+<body>
+    <div data-role="page" id="mainPage"  style="overflow: hidden;">
+        <header data-role="header" data-theme="b">
+         <a href="#help" data-icon="info" data-role="button" data-rel="dialog">
+                Help</a>
+            <h1>
+                Forever a Centurion</h1>
+           
+                <a href="#about" data-icon="info" data-role="button" data-rel="dialog">
+                About</a>
+        </header>
+        <div class="ui-body ui-body-a" id="mainContent">
+            @RenderBody()
+        </div>
+        @RenderSection("BelowMain", true)
+        <footer data-role="footer" data-theme="b">
+            <div class="ui-body">
+                @RenderSection("Footer", true)
+            </div>
+        </footer>
+    </div>
+    <div data-role="dialog" data-url="help" id="help" role="dialog" data-external-page="true">
+        <div data-role="header" data-theme="b" role="banner">
+            <h1>What is this magic?</h1>
+        </div>
+        <div data-role="content" data-theme="c" role="main" class="ui-body">
+            <ol data-role="listview">
+            <li>Fill shot glasses with beer</li>
+            <li>Start the application</li>
+            <li>ZING - Take a shot</li>
+            <li>Reach 100</li>
+            <li>???</li>
+            <li>Profit (or not)</li>
+            </ol>
+            <br />
+            <a href="#" data-role="button" data-rel="back" data-theme="b" style="margin-top: 10px;">Enough!</a>
+            
+        </div>
+    </div>
+
+     <div data-role="dialog" data-url="about" id="about" role="dialog" data-external-page="true">
+        <div data-role="header" data-theme="b" role="banner">
+            <h1>About this</h1>
+        </div>
+        <div data-role="content" data-theme="c" role="main" class="ui-body">
+            <p>This was made by BBQCode Coop. 2011</p>
+            <p>We take no responsability for people who try too hard to get to 100.</p>
+            <p style="font-weight: bold;">Be responsible.</p>
+            <br />
+            <a href="#" data-role="button" data-rel="back" data-theme="b" style="margin-top: 10px;">ENOUGH!</a>
+            
+        </div>
+    </div>
+</body>
+</html>

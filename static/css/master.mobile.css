@@ -1,0 +1,24 @@
+﻿#timeRemaining
+{
+    font-size: 16em;
+    font-weight: bold;
+}
+#shotsTaken
+{
+    text-align: right;
+}
+
+#shotsBar h1
+{
+    font-size: 3em;
+}
+
+footer .ui-body
+{
+    padding: 0;
+}
+
+footer .ui-slider
+{
+    margin: 10px;
+}

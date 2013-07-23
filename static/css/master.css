@@ -1,0 +1,166 @@
+﻿body 
+{
+	background-color: #2d2d2d;
+	font-family: Tahoma, Arial, Sans-Serif;
+}
+
+body a:link, body a:visited
+{
+	color: #c90808;
+	text-decoration: none;
+}
+
+body a:hover
+{
+	color: #d93636;
+	text-decoration: underline;
+}
+
+header
+{
+	border-bottom: 1px solid #393939;
+	background-color: #494949;
+}
+
+div.headerContent
+{
+	width: 820px;
+	margin: 0 auto;
+	height: 110px;
+	background-image: url('../img/logo.png');
+	background-repeat: no-repeat;
+	background-position: 20px 0;
+}
+
+
+div.footerContent
+{
+	width: 820px;
+	margin: 0 auto;
+	height: 60px;
+	text-align: center;
+}
+
+span.footerCopyright
+{
+	color: #808080;
+	font-family: Tahoma, Arial, Sans-Serif;
+	font-size: 0.8em;
+	font-weight: bold;
+	padding-top: 1.8em;
+	display: block;
+}
+
+span.footerCopyright a:link, span.footerCopyright a:visited
+{
+	color: #949494;
+}
+span.footerCopyright a:hover
+{
+	color: #aaaaaa;
+}
+
+
+section#main
+{
+	width: 720px;
+	margin: 0 auto;
+	background-color: #f2f2f2;
+	min-height: 502px;
+	color: #222222;
+}
+
+div.left
+{
+	float: left;
+	width: 70%;
+	height: 100%;
+}
+
+div.right
+{
+	float: right;
+	background-color: #d2d2d2;
+	height: 100%;
+	width: 29%;
+	border-left: 1px solid #444444;
+	border-bottom: 1px solid #444444;
+}
+
+div#gameStarter
+{
+	font-size: 2.6em;
+	padding: 0.4em;
+}
+
+#gameStarter input
+{
+	text-align: center;
+	height: 2.2em;
+	width: 4em;
+	position:relative;
+	top: -0.5em;
+}
+
+div#gameStarted
+{
+	height: 100%;
+}
+
+span#timeRemaining
+{
+	font-size: 26em;
+	padding-left: 30px;
+	display: block;
+}
+span#timeRemainingLabel
+{
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 2em;
+}
+
+span#starterShots
+{
+	display: block;
+	padding: 8px;
+	text-align: center;
+}
+
+a#aStart
+{
+	font-size: 4em;
+	display: block;
+	padding: 8px;
+	text-align: center;
+	margin-top: 20px;
+}
+
+span#shotsTaken
+{
+	display: block;
+	font-size: 3em;
+	padding: 12px;
+	text-align: center;
+}
+
+span#shotsTakenLabel
+{
+	display: block;
+	font-size: 1.2em;
+	padding-right: 14px;
+	padding-top: 4px;
+	text-align: center;
+}
+
+div.pauseLinks
+{
+	text-align:center;
+	padding-bottom: 10px;
+}
+
+div.pauseLinks a
+{
+	font-size: 2em;
+}
