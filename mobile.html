@@ -1,13 +1,14 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Forever a Centurion</title>
-    <link rel="shortcut icon" href="@Url.Content("~/Content/Images/forevercenturion.ico")" type="image/x-icon">
-    <link href="@Url.Content("~/Content/Css/master.mobile.css")" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="static/img/forevercenturion.ico" type="image/x-icon">
+    <link href="http://yui.yahooapis.com/2.9.0/build/reset/reset-min.css" rel="stylesheet" type="text/css">
+    <link href="static/css/master.mobile.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.css" />
-    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
-    @RenderSection("Head", false)
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js"></script>
+	<script src="static/js/centurion.mobile.js"></script>
 </head>
 <body>
     <div data-role="page" id="mainPage"  style="overflow: hidden;">
@@ -21,14 +22,45 @@
                 About</a>
         </header>
         <div class="ui-body ui-body-a" id="mainContent">
-            @RenderBody()
+            <div class="start" id="gameStarter">
+    <h1>
+        Let's start this</h1>
+    <div data-role="fieldcontain">
+        <label for="txtNbShotsStart">
+            Starting shots:</label>
+        <input type="range" name="txtNbShotsStart" id="txtNbShotsStart" value="0" min="0"
+            max="100" />
+    </div>
+    <a href="#start" data-role="button" data-icon="check" id="aStart">Start the game!</a>
+    <p style="text-align: center;">
+        No idea what this is? See the <a href="#help" data-rel="dialog">help page</a>.</p>
+</div>
+<div class="game" id="gameStarted" style="display: none;">
+        <span id="timeRemaining">
+        </span>
+        <span id="timeRemainingLabel">
+            seconds. until next shot</span>
+</div>
         </div>
-        @RenderSection("BelowMain", true)
+       
         <footer data-role="footer" data-theme="b">
             <div class="ui-body">
-                @RenderSection("Footer", true)
+                <div class="ui-bar ui-bar-a ui-grid-a" id="shotsBar">
+	 <h1 id="shotsTaken" class="ui-block-a">
+        </h1>
+        <h1 id="shotsToTake" class="ui-block-b">
+        </h1>
+</div>
+    <label for="pauser" class="ui-hidden-accessible" data-theme="a">
+        Game started/off</label>
+    <select name="pauser" id="pauser" data-role="slider" data-theme="a">
+        <option value="off">Off</option>
+        <option value="on">On</option>
+    </select>
             </div>
         </footer>
+		<audio id="song" src="static/sounds/bell.wav">
+</audio>
     </div>
     <div data-role="dialog" data-url="help" id="help" role="dialog" data-external-page="true">
         <div data-role="header" data-theme="b" role="banner">
@@ -54,7 +86,6 @@
             <h1>About this</h1>
         </div>
         <div data-role="content" data-theme="c" role="main" class="ui-body">
-            <p>This was made by BBQCode Coop. 2011</p>
             <p>We take no responsability for people who try too hard to get to 100.</p>
             <p style="font-weight: bold;">Be responsible.</p>
             <br />
